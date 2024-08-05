@@ -1,12 +1,18 @@
-import './Card.css'
+import "./Card.css";
 
-function Card() {
-    return (
-        <div className="card">
-            <h1>Título do Card</h1>
-            <p>Descrição do Card</p>
-        </div>
-    )
+interface CardProps {
+  titulo: string;
+  descricao: string;
+  quantidade?: number;
 }
 
-export default Card
+function Card({ titulo, descricao }: CardProps) {
+  return (
+    <div className="card">
+      <h1>{titulo}</h1>
+      <p>{descricao}</p>
+    </div>
+  );
+}
+
+export default Card;
